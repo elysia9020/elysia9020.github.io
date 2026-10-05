@@ -74,7 +74,7 @@
             flex-wrap: wrap;
         }
         nav a {
-            color: #aab3d6;
+            color: #b8d4ff;
             text-decoration: none;
             font-size: 14px;
             padding: 6px 10px;
@@ -82,8 +82,8 @@
             transition: 0.2s;
         }
         nav a:hover {
-            color: #73a8ff;
-            background: #1c2230;
+            color: #9cc4ff;
+            background: rgba(30, 40, 58, 0.7);
         }
 
         /* ===== Hero 横幅 ===== */
@@ -103,7 +103,7 @@
             background-clip: text;
         }
         .hero p {
-            color: #8b93b3;
+            color: #a8c4f0;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -115,9 +115,9 @@
             flex-wrap: wrap;
         }
         .badge {
-            background: #1c2230;
-            border: 1px solid #2b3145;
-            color: #aab3d6;
+            background: rgba(30, 40, 58, 0.6);
+            border: 1px solid rgba(115, 168, 255, 0.3);
+            color: #b8d4ff;
             font-size: 12px;
             padding: 4px 12px;
             border-radius: 20px;
@@ -131,16 +131,17 @@
         /* ===== 区块 ===== */
         section {
             margin-bottom: 36px;
-            background: #141924;
+            background: rgba(28, 40, 66, 0.5);
             border-radius: 14px;
             padding: 24px;
-            border: 1px solid #222838;
+            border: 1px solid rgba(115, 168, 255, 0.3);
+            backdrop-filter: blur(6px);
         }
         section h2 {
-            color: #73a8ff;
+            color: #7fb2ff;
             margin-bottom: 18px;
             padding-bottom: 10px;
-            border-bottom: 1px solid #222838;
+            border-bottom: 1px solid rgba(115, 168, 255, 0.25);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -148,36 +149,36 @@
 
         /* 公告 */
         .notice-item {
-            background: #1a2029;
+            background: rgba(34, 48, 78, 0.55);
             padding: 14px 16px;
             border-radius: 10px;
             margin-bottom: 12px;
-            border-left: 3px solid #73a8ff;
+            border-left: 3px solid #7fb2ff;
         }
         .notice-item.warn {
             border-left-color: #ffb84d;
         }
         .notice-time {
             font-size: 12px;
-            color: #6b7394;
+            color: #8fa8d8;
             margin-bottom: 4px;
         }
         .notice-item strong {
-            color: #e6e8f0;
+            color: #d8e6ff;
         }
         .notice-item p {
-            color: #9aa3c2;
+            color: #b8d4ff;
             font-size: 14px;
             margin-top: 4px;
         }
 
         /* 版本 */
         .version-card {
-            background: #1a2029;
+            background: rgba(34, 48, 78, 0.55);
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 14px;
-            border: 1px solid #262d3f;
+            border: 1px solid rgba(115, 168, 255, 0.28);
         }
         .version-tag {
             display: inline-block;
@@ -189,14 +190,15 @@
             margin-bottom: 8px;
         }
         .version-tag.old {
-            background: #3a4258;
+            background: rgba(58, 66, 88, 0.85);
         }
         .version-card h3 {
             font-size: 18px;
             margin-bottom: 6px;
+            color: #dceaff;
         }
         .version-card p {
-            color: #9aa3c2;
+            color: #b8d4ff;
             font-size: 14px;
         }
         .download-btn {
@@ -216,45 +218,46 @@
         }
         .old-version-tip {
             font-size: 13px;
-            color: #6b7394;
+            color: #8fa8d8;
             margin-top: 8px;
         }
 
         /* 资讯 */
         .news-item {
             padding: 12px 0;
-            border-bottom: 1px solid #222838;
+            border-bottom: 1px solid rgba(115, 168, 255, 0.18);
         }
         .news-item:last-child {
             border-bottom: none;
         }
         .news-date {
             font-size: 12px;
-            color: #6b7394;
+            color: #8fa8d8;
         }
         .news-item strong {
-            color: #e6e8f0;
+            color: #d8e6ff;
         }
         .news-item p {
-            color: #9aa3c2;
+            color: #b8d4ff;
             font-size: 14px;
             margin-top: 3px;
         }
 
         /* 作者说 */
         .author-box {
-            background: #1a2029;
+            background: rgba(34, 48, 78, 0.55);
             padding: 20px;
             border-radius: 12px;
+            border: 1px solid rgba(115, 168, 255, 0.28);
         }
         .author-box p {
-            color: #aab3d6;
+            color: #b8d4ff;
             font-size: 14.5px;
             margin-bottom: 12px;
         }
         .author-sign {
             text-align: right;
-            color: #73a8ff;
+            color: #7fb2ff;
             font-style: italic;
             margin-top: 8px;
         }
@@ -265,39 +268,39 @@
         }
         .donate-desc {
             margin-bottom: 16px;
-            color: #aab3d6;
+            color: #b8d4ff;
         }
         .qrcode-placeholder {
             width: 200px;
             height: 200px;
-            background: #1a2029;
+            background: rgba(34, 48, 78, 0.55);
             margin: 0 auto;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b7394;
-            border: 2px dashed #2b3145;
+            color: #8fa8d8;
+            border: 2px dashed rgba(115, 168, 255, 0.35);
             flex-direction: column;
             gap: 6px;
         }
         .donate-note {
             margin-top: 12px;
             font-size: 13px;
-            color: #6b7394;
+            color: #8fa8d8;
         }
 
         /* 页脚 */
         footer {
             text-align: center;
             padding: 26px 16px;
-            color: #aab3d6;
+            color: #8fa8d8;
             font-size: 13px;
-            border-top: 1px solid #1c2130;
-            background: rgba(13, 17, 23, 0.65);
+            border-top: 1px solid rgba(115, 168, 255, 0.2);
+            background: rgba(13, 17, 23, 0.6);
         }
         footer a {
-            color: #6b84b8;
+            color: #7fb2ff;
             text-decoration: none;
         }
 
