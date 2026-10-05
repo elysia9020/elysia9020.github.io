@@ -19,6 +19,23 @@
             color: #e6e8f0;
             line-height: 1.65;
         }
+
+        /* ===== 背景随机轮播 ===== */
+        .bg-layer {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -2;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: opacity 1.5s ease;
+        }
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            background: rgba(10, 13, 20, 0.62);
+        }
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -294,6 +311,9 @@
 </head>
 <body>
 
+<div id="bgLayer" class="bg-layer"></div>
+<div class="bg-overlay"></div>
+
 <header>
     <div class="container header-inner">
         <div class="logo-title">AI娘桌宠 · 项目主页</div>
@@ -432,6 +452,29 @@
             if (target) target.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // ===== 背景随机轮播（约 2 分钟一循环，每次随机抽 1 张） =====
+    const BG_IMAGES = [
+        'images/bg-1-qianwen.jpg',
+        'images/bg-2-glm.jpg',
+        'images/bg-3-wheelchair.jpg',
+        'images/bg-4-ciallo.jpg'
+    ];
+    const bgLayer = document.getElementById('bgLayer');
+    let bgCurrent = Math.floor(Math.random() * BG_IMAGES.length);
+    bgLayer.style.backgroundImage = 'url(' + BG_IMAGES[bgCurrent] + ')';
+    setInterval(function () {
+        let next;
+        do {
+            next = Math.floor(Math.random() * BG_IMAGES.length);
+        } while (next === bgCurrent);   // 避免连续两次同一张
+        bgLayer.style.opacity = 0;
+        setTimeout(function () {
+            bgCurrent = next;
+            bgLayer.style.backgroundImage = 'url(' + BG_IMAGES[bgCurrent] + ')';
+            bgLayer.style.opacity = 1;
+        }, 1500);   // 1.5 秒淡入淡出过渡
+    }, 120000);   // 2 分钟切换一次
 </script>
 </body>
 </html>
