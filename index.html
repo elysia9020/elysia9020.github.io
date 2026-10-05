@@ -303,6 +303,17 @@
             color: #7fb2ff;
             text-decoration: none;
         }
+        .visit-counter {
+            font-size: 15px;
+            color: #7fb2ff;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .visit-counter .num {
+            color: #ffd28a;
+            font-weight: 700;
+        }
 
         /* 移动端优化 */
         @media (max-width: 600px) {
@@ -477,9 +488,12 @@
 </main>
 
 <footer>
+    <div class="visit-counter">📊 本站累计访问 <span class="num" id="busuanzi_value_site_pv"></span> 次 · 独立访客 <span class="num" id="busuanzi_value_site_uv"></span> 人</div>
     © 2026 AI娘桌宠项目 · 个人非商业娱乐<br>
     形象授权 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">CC BY-NC-SA 4.0</a> · 任何商用行为与开发者无关
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script>
     // 平滑滚动
