@@ -391,6 +391,12 @@
     <section id="version">
         <h2>📦 版本下载</h2>
         <div class="version-card">
+            <span class="version-tag">v3.7pro</span>
+            <h3>DeepSeek娘v3.7pro正式加强版</h3>
+            <p>✅ 新增功能<br> <br>1. 双模式切换：经典全身立绘 ↔ Q版趴桌小头（抖音同款，默认Q版）<br>​<br>2. 桌宠大小滑杆调节：50% ~ 200%，实时生效，无需重启服务<br>​<br>3. 云朵思想气泡：Q版专用，气泡显示在角色头顶上方，不会遮挡人物<br>​<br>4. 运行内存面板：应用内展示系统总内存/已用/可用，本应用PSS、Java堆占用<br>​<br>5. Token用量统计：流式对话+普通对话累计今日token消耗，UI面板实时展示<br>​<br>6. 游戏模式台词：单击触发台词「压力一只大肥鱼，这真的好吗？」「玩游戏就玩游戏，点我干什么呀」<br>​<br>7. 游戏模式自动适配横竖屏：进入横屏游戏自动刷新屏幕宽高计算坐标<br>​<br>8. 悬浮窗自动避让：APP主界面前台时，桌宠自动移动到右上角，不遮挡设置界面<br> <br>🛠️ Bug修复清单<br> <br>1. 【严重】修复服务启动闪退： applyGlobalScale()  在气泡控件初始化前访问lateinit tvBubble，抛出 UninitializedPropertyAccessException 崩溃，增加初始化判断保护<br>​<br>2. 【核心】Q版气泡遮挡人物：修改布局，FrameLayout改为垂直LinearLayout，气泡在上、角色在下，彻底解决点击互动对话框盖住人物；窗口固定尺寸，气泡使用INVISIBLE预占位，显示隐藏不改变窗口大小、不裁剪内容<br>​<br>3. 【核心】拖动/动作残影问题：<br>​<br>- Q版模式禁用双层图片叠加ivFrameA+ivOverlay，改为单层渲染，消除透明PNG边缘Alpha叠加残影<br>​<br>- 拖动过程暂停角色身体微摆动画，取消拖动弹跳缩放动画，避免动画+移动叠加产生抖动残影<br>​<br>4. 【核心】游戏模式角色消失：<br>​<br>- 原问题：使用启动时缓存竖屏尺寸，进入横屏游戏坐标计算错误，角色跑到屏幕外；增加屏幕宽高定时轮询，进入游戏强制刷新屏幕尺寸<br>​<br>- 修复缩放锚点：使用窗口实际测量高度，不再使用估算值，缩放后角色不会被窗口裁剪<br>​<br>- 坐标计算修正：游戏贴底位置使用未缩放窗口尺寸计算，扣除导航栏高度，角色不会被系统导航栏遮挡<br>​<br>- 游戏模式缩放范围限制0.35~0.9倍，不受全局缩放滑杆极端数值影响，角色始终可见<br>​<br>5. 【权限清单补全】AndroidManifest补全 QUERY_ALL_PACKAGES 、 POST_NOTIFICATIONS 权限，增加 &lt;queries&gt; 兜底游戏应用列表，游戏检测稳定性提升<br>​<br>6. 【构建编译Bug】修复 ActivityMainBinding 未识别报错，在build.gradle注册data binding生成sourceSets目录，解决Gradle编译绑定类找不到问题<br>​<br>7. 【位置逻辑】角色吸附、贴底逻辑增加屏幕边界Clamp，防止角色移动到屏幕外无法找回<br>​<br>8. 【聊天面板优化】打开聊天面板时自动隐藏旧气泡，宠物自动避让到面板下方空位，面板坐标限制在屏幕内部，不会超出屏幕下缘<br> <br>📦 素材新增<br> <br>1. Q版6套表情素材（透明底640px）：idle待机、blink眨眼、happy开心、talk说话、poke被戳、sleep犯困<br>​<br>2. 云朵气泡drawable资源（白色椭圆+递减小圆点，Q版专用）<br>​<br>3. 新增布局文件  floating_chibi.xml ，Q版悬浮窗专用布局</p>
+            <a href="https://elysia9020.github.io/DeepSeek%E5%A8%98%E6%A1%8C%E5%AE%A0V3.7pro.apk" class="download-btn">⬇ 下载 APK（直链）</a>
+        </div>
+        <div class="version-card">
             <span class="version-tag">v3.6pro</span>
             <h3>DeepSeek娘v3.6pro</h3>
             <p>修复了一些bug，优化了一些内容，增添了游戏功能</p>
